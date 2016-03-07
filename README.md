@@ -4,25 +4,32 @@
 pip install virtualenv
 
 搭建虚拟环境
+
  virtualenv /home/wealink/projects/project
 
 激活虚拟环境
+
 source /home/wealink/projects/project/bin/activate
 
 
 安装 Flask
+
 pip install Flask
 
 在/projects/project 目录下新建一个 project.py，内容是:
 
 from flask import Flask
+
 app = Flask(__name__)
 
 @app.route('/')
+
 def index():
+
     return "Hello world!"
 
 if __name__ == '__main__':
+
     app.run()
 
 
@@ -30,9 +37,11 @@ if __name__ == '__main__':
 sudo apt-get install apache2-utils 
 
 实验环境下测试
+
  ab -c 10 -n 10000 http://127.0.0.1:1234/
 
 开发模式下测试
+
 ab -c 10 -n 1000 http://127.0.0.1:5000/
 
 （使用gunicorn测试）
@@ -111,31 +120,39 @@ server {
 }
 
 检查nginx是否正确
+
 sudo nginx -t
 
 
 vim /etc/hosts
+
 127.0.0.l  www.123.com
  
 
 sudo apt-get  install openssl
 
 使用OpenSSL生成证书
+
 生成RSA密钥的方法
+
  openssl genrsa -des3 -out server.key 2048 
+ 
 这个命令会生成一个2048位的密钥，同时有一个des3方法加密的密码
 
 生成证书请求文件
+
 openssl req -new -key server.key -out server.csr
+
 用之前生成的秘钥 server.ky文件生成 server.csr (证书请求文件)
 
 在加载SSL支持的Nginx并使用上述私钥时除去必须的口令：
+
 cp server.key server.key.org
  
 openssl rsa -in server.key.org -out server.key 
 
-
 标记证书使用上述私钥和CSR：
+
 openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
 
 
