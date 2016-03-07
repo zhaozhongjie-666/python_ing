@@ -1,0 +1,59 @@
+[2016-03-02 21:10:56 +0000] [24433] [INFO] Starting gunicorn 19.4.5
+[2016-03-02 21:10:56 +0000] [24433] [INFO] Listening at: http://127.0.0.1:1234 (24433)
+[2016-03-02 21:10:56 +0000] [24433] [INFO] Using worker: sync
+[2016-03-02 21:10:56 +0000] [24438] [INFO] Booting worker with pid: 24438
+[2016-03-02 21:22:12 +0000] [24433] [CRITICAL] WORKER TIMEOUT (pid:24438)
+[2016-03-02 21:22:12 +0000] [24438] [INFO] Worker exiting (pid: 24438)
+[2016-03-02 21:22:12 +0000] [25554] [INFO] Booting worker with pid: 25554
+[2016-03-02 21:28:49 +0000] [24433] [INFO] Handling signal: term
+[2016-03-02 21:28:49 +0000] [25554] [INFO] Worker exiting (pid: 25554)
+[2016-03-02 21:28:49 +0000] [24433] [INFO] Shutting down: Master
+[2016-03-03 09:04:11 +0000] [1535] [INFO] Starting gunicorn 19.4.5
+[2016-03-03 09:04:11 +0000] [1535] [INFO] Listening at: http://127.0.0.1:1234 (1535)
+[2016-03-03 09:04:11 +0000] [1535] [INFO] Using worker: sync
+[2016-03-03 09:04:11 +0000] [1670] [INFO] Booting worker with pid: 1670
+[2016-03-03 09:46:39 +0000] [1670] [INFO] Worker exiting (pid: 1670)
+[2016-03-03 09:46:39 +0000] [1535] [INFO] Handling signal: term
+[2016-03-03 09:46:39 +0000] [1535] [INFO] Shutting down: Master
+[2016-03-03 09:46:41 +0000] [6040] [INFO] Starting gunicorn 19.4.5
+[2016-03-03 09:46:41 +0000] [6040] [INFO] Listening at: http://127.0.0.1:1234 (6040)
+[2016-03-03 09:46:41 +0000] [6040] [INFO] Using worker: sync
+[2016-03-03 09:46:41 +0000] [6045] [INFO] Booting worker with pid: 6045
+[2016-03-03 09:47:00 +0000] [6040] [INFO] Handling signal: term
+[2016-03-03 09:47:00 +0000] [6045] [INFO] Worker exiting (pid: 6045)
+[2016-03-03 09:47:00 +0000] [6040] [INFO] Shutting down: Master
+[2016-03-03 09:50:06 +0000] [6161] [INFO] Starting gunicorn 19.4.5
+[2016-03-03 09:50:06 +0000] [6161] [INFO] Listening at: http://127.0.0.1:1234 (6161)
+[2016-03-03 09:50:06 +0000] [6161] [INFO] Using worker: sync
+[2016-03-03 09:50:06 +0000] [6166] [INFO] Booting worker with pid: 6166
+[2016-03-03 09:50:19 +0000] [6161] [INFO] Handling signal: term
+[2016-03-03 09:50:19 +0000] [6166] [INFO] Worker exiting (pid: 6166)
+[2016-03-03 09:50:19 +0000] [6161] [INFO] Shutting down: Master
+[2016-03-03 09:50:20 +0000] [6178] [INFO] Starting gunicorn 19.4.5
+[2016-03-03 09:50:20 +0000] [6178] [INFO] Listening at: http://127.0.0.1:1234 (6178)
+[2016-03-03 09:50:20 +0000] [6178] [INFO] Using worker: sync
+[2016-03-03 09:50:20 +0000] [6183] [INFO] Booting worker with pid: 6183
+[2016-03-03 09:58:52 +0000] [6178] [INFO] Handling signal: term
+[2016-03-03 09:58:52 +0000] [6183] [INFO] Worker exiting (pid: 6183)
+[2016-03-03 09:58:52 +0000] [6178] [INFO] Shutting down: Master
+[2016-03-03 09:58:53 +0000] [6527] [INFO] Starting gunicorn 19.4.5
+[2016-03-03 09:58:53 +0000] [6527] [INFO] Listening at: http://127.0.0.1:1234 (6527)
+[2016-03-03 09:58:53 +0000] [6527] [INFO] Using worker: sync
+[2016-03-03 09:58:53 +0000] [6532] [INFO] Booting worker with pid: 6532
+[2016-03-03 19:51:41 +0000] [6527] [INFO] Handling signal: term
+[2016-03-03 19:51:41 +0000] [6532] [INFO] Worker exiting (pid: 6532)
+[2016-03-03 19:51:41 +0000] [6527] [INFO] Shutting down: Master
+[2016-03-04 09:06:33 +0000] [1375] [INFO] Starting gunicorn 19.4.5
+[2016-03-04 09:06:33 +0000] [1375] [INFO] Listening at: http://127.0.0.1:1234 (1375)
+[2016-03-04 09:06:33 +0000] [1375] [INFO] Using worker: sync
+[2016-03-04 09:06:33 +0000] [1574] [INFO] Booting worker with pid: 1574
+[2016-03-04 11:23:50 +0000] [1375] [INFO] Handling signal: term
+[2016-03-04 11:23:50 +0000] [1574] [INFO] Worker exiting (pid: 1574)
+[2016-03-04 11:23:50 +0000] [1375] [INFO] Shutting down: Master
+[2016-03-07 09:04:26 +0000] [1448] [INFO] Starting gunicorn 19.4.5
+[2016-03-07 09:04:26 +0000] [1448] [INFO] Listening at: http://127.0.0.1:1234 (1448)
+[2016-03-07 09:04:26 +0000] [1448] [INFO] Using worker: sync
+[2016-03-07 09:04:26 +0000] [1570] [INFO] Booting worker with pid: 1570
+[2016-03-07 10:07:24 +0000] [1448] [INFO] Handling signal: term
+[2016-03-07 10:07:24 +0000] [1570] [INFO] Worker exiting (pid: 1570)
+[2016-03-07 10:07:24 +0000] [1448] [INFO] Shutting down: Master
