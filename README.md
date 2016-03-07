@@ -28,6 +28,7 @@ if __name__ == '__main__':
 
 
 sudo apt-get install apache2-utils 
+
 实验环境下测试
  ab -c 10 -n 10000 http://127.0.0.1:1234/
 
@@ -35,15 +36,20 @@ sudo apt-get install apache2-utils
 ab -c 10 -n 1000 http://127.0.0.1:5000/
 
 （使用gunicorn测试）
+
 pip install gunicorn
-一次运行4个进程
-w 表示开启多少个 worker，-b 表示 gunicorn 开发的访问地址
-/home/wealink/projects/project/bin/python  /home/wealink/projects/project/bin/gunicorn -b 127.0.0.1:1234 project:app -w 4
+
+一次运行4个进程，w 表示开启多少个 worker，-b 表示 gunicorn 开发的访问地址
+
+/home/wealink/projects/project/bin/python    /home/wealink/projects/project/bin/gunicorn -b 127.0.0.1:1234 project:app -w 4
+
 project:app  中project 当前运行module名（文件名），app创建的Flask 对象
 
 
 安装 supervisor
+
 apt-get install supervisor
+
 apt-get install python-reconfigure  -y
 
 sudo supervisorctl -c /etc/supervisor/supervisord.conf restart all
@@ -51,28 +57,36 @@ sudo supervisorctl -c /etc/supervisor/supervisord.conf restart all
 
 
 vim /etc/supervisor/conf.d/test.conf 
+
 在里面写入：（1234 可以更改为你喜欢的端口，只要和其他的端口不重合就行。root 也可改为其他用户）
 
 [program:project]
+
 command = /home/wealink/projects/project/bin/gunicorn -b 127.0.0.1:1234 project:app -w4
+
 directory = /home/wealink/projects/project/
+
 user = root
+
 autostart = true
+
 autorestart = true
+
 stderr_logfile = /home/wealink/projects/project/logs/stderr.log
+
 stdout_logfile = /home/wealink/projects/project/logs/stdout.log
 
 
 新建 logs 文件夹：
-mkdir /home/wealink/projects/project/logs
 
-查看状态
- sudo supervisorctl
+mkdir /home/wealink/projects/project/logs
 
 
 
 apt-get install nginx
+
 配置nginx
+
 vim /etc/nginx/conf.d/project.conf
 
 server {
@@ -116,7 +130,8 @@ openssl req -new -key server.key -out server.csr
 用之前生成的秘钥 server.ky文件生成 server.csr (证书请求文件)
 
 在加载SSL支持的Nginx并使用上述私钥时除去必须的口令：
- cp server.key server.key.org
+cp server.key server.key.org
+ 
 openssl rsa -in server.key.org -out server.key 
 
 
